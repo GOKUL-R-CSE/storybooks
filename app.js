@@ -49,6 +49,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 // routes
 app.use('/', require('./routes/index'))
 app.use('/auth', require('./routes/auth'))
+app.use('/stories', require('./routes/stories'))
 
 const port = process.env.PORT || 5000
 app.listen(port, console.log(`sever running in ${process.env.NODE_ENV} mode on port ${port}`))
